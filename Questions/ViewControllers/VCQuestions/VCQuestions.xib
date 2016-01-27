@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15A282a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VCQuestions">
+            <connections>
+                <outlet property="buttonSubmit" destination="Ryu-E0-Lp4" id="1Vd-gB-hBJ"/>
+                <outlet property="tbView" destination="INN-dx-pSE" id="Jyw-hJ-4ko"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="INN-dx-pSE">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="448"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="59K-4i-abo"/>
+                        <outlet property="delegate" destination="-1" id="h2z-yA-LlF"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryu-E0-Lp4">
+                    <rect key="frame" x="66" y="466" width="184" height="30"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.37647058820000001" green="0.027450980390000001" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="184" id="gff-mS-qCB"/>
+                        <constraint firstAttribute="height" constant="30" id="pUL-LB-jb4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                    <state key="normal" title="Submit">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="actionSubmit:" destination="-1" eventType="touchUpInside" id="KH2-dI-7fw"/>
+                    </connections>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="INN-dx-pSE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1Mm-vD-2lz"/>
+                <constraint firstAttribute="bottom" secondItem="INN-dx-pSE" secondAttribute="bottom" id="BwB-LU-Z5Z"/>
+                <constraint firstItem="INN-dx-pSE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="G9n-QG-94y"/>
+                <constraint firstAttribute="bottom" secondItem="Ryu-E0-Lp4" secondAttribute="bottom" constant="8" id="Hu7-51-xlC"/>
+                <constraint firstItem="Ryu-E0-Lp4" firstAttribute="top" secondItem="INN-dx-pSE" secondAttribute="bottom" constant="18" id="THJ-CJ-APz"/>
+                <constraint firstItem="Ryu-E0-Lp4" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-2" id="jfO-Wh-hBr"/>
+                <constraint firstAttribute="trailing" secondItem="INN-dx-pSE" secondAttribute="trailing" id="qCS-l9-hXO"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="BwB-LU-Z5Z"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="473" y="434"/>
+        </view>
+    </objects>
+</document>
